@@ -1,4 +1,4 @@
-import * as motion from "motion/react-client";
+// import * as motion from "motion/react-client";
 import Link from "next/link";
 
 export default function Home() {
