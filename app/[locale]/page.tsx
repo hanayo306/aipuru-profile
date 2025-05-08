@@ -30,12 +30,14 @@ export default async function Home() {
 
             <div className="flex gap-2 justify-center md:justify-start">
               {links.map((l) => (
-                <Link href={l.url} target={"_blank"} key={l.url}>
-                  <l.icon size={24} />
+                <div key={l.url}>
+                  <Link href={l.url} target={"_blank"}>
+                    <l.icon size={24} />
+                  </Link>
                   <span className="text-xs">
                     {l.info && t(`links.${l.info}`)}
                   </span>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
