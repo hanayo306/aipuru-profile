@@ -1,21 +1,23 @@
 // import * as motion from "motion/react-client";
 import Link from "next/link";
-import ProfileIcon1 from "./profile_1.png";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import links from "@/app/[locale]/links";
+import ProfileImage from "@/app/[locale]/ProfileImage";
 
-export default async function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations("HomePage");
 
   return (
     <>
-      <div className="max-w-xl mx-auto min-h-[calc(100lvh-64px)] flex items-center">
+      <div className="max-w-xl mx-auto min-h-[calc(100lvh-64px)] flex items-center justify-center flex-col gap-8">
         <div className="w-full flex flex-col md:flex-row justify-center items-center gap-12 p-4">
           <div className="w-32 md:w-1/2 max-h-lvh overflow-hidden">
-            <div className="w-full aspect-square border border-black flex justify-center items-center">
-              <Image src={ProfileIcon1} alt={"profile icon"} />
-            </div>
+            <ProfileImage />
           </div>
 
           <div className="md:w-[1px] w-full md:h-[200px] h-[1px] bg-black " />
@@ -41,6 +43,18 @@ export default async function Home() {
               ))}
             </div>
           </div>
+        </div>
+        <div className="flex gap-4">
+          {["zh", "ja"].map((l) => (
+            <Link
+              href={`/${l}`}
+              key={l}
+              className={`flex text-xl ${l === locale ? "font-extrabold" : ""}`}
+            >
+              {l === "zh" && "中文"}
+              {l === "ja" && "日本語"}
+            </Link>
+          ))}
         </div>
       </div>
       <footer className="h-16 flex justify-center items-center">
