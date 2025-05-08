@@ -32,6 +32,9 @@ export default async function Home() {
               {links.map((l) => (
                 <Link href={l.url} target={"_blank"} key={l.url}>
                   <l.icon size={24} />
+                  <span className="text-xs">
+                    {l.info && t(`links.${l.info}`)}
+                  </span>
                 </Link>
               ))}
             </div>

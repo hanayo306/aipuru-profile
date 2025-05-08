@@ -15,11 +15,13 @@ const links: LinkInfo[] = [
     name: "X",
     url: "https://x.com/plzang",
     icon: FaXTwitter,
+    info: "x_plzang",
   },
   {
     name: "X",
     url: "https://x.com/puruzyang_v",
     icon: FaXTwitter,
+    info: "x_puruzyang_v",
   },
   {
     name: "Bluesky",
