@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next";
 
 const chineseFont = localFont({
   src: "./fonts/NotoSansTC-Light.ttf",
@@ -31,6 +32,7 @@ export default async function LocaleLayout({
         className={`${chineseFont.className} bg-gradient-to-r from-violet-900 to-blue-900`}
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
