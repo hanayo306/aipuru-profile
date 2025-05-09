@@ -13,6 +13,14 @@ const chineseFont = localFont({
 export const metadata: Metadata = {
   title: "普魯醬",
   description: "普魯醬",
+  twitter: {
+    title: "普魯醬",
+    description: "普魯醬",
+  },
+  openGraph: {
+    title: "普魯醬",
+    description: "普魯醬",
+  },
 };
 
 export default async function LocaleLayout({
