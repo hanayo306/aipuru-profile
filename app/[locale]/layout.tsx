@@ -27,7 +27,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${chineseFont.className}`}>
+      <body
+        className={`${chineseFont.className} bg-gradient-to-r from-violet-900 to-blue-900`}
+      >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
