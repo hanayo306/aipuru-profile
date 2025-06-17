@@ -32,9 +32,7 @@ export default async function Home({
             <div className="w-full md:w-1/2 h-full text-center md:text-left flex flex-col md:flex gap-4">
               <h1 className="text-3xl font-bold">
                 {t("name")}
-                {locale === "ja" && (
-                  <span className="text-xs"> {t("fain")}</span>
-                )}
+                {<span className="text-xs"> {t("fain")}</span>}
               </h1>
 
               <p>

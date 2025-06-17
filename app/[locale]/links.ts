@@ -1,7 +1,7 @@
 import { IconType } from "react-icons";
 import { FaBluesky } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaTwitch } from "react-icons/fa";
 
 type LinkInfo = {
   name: string;
@@ -32,6 +32,11 @@ const links: LinkInfo[] = [
     name: "Facebook",
     url: "https://www.facebook.com/profile.php?id=61574849615981",
     icon: FaFacebook,
+  },
+  {
+    name: "Twitch",
+    url: "https://www.twitch.tv/hanayo306",
+    icon: FaTwitch,
   },
 ];
 
