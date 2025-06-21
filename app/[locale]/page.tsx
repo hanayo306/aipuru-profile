@@ -3,8 +3,9 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import links from "@/app/[locale]/links";
 import Image from "next/image";
-import ProfileIcon1 from "@/app/[locale]/profile_1.png";
+import ProfileIcon2 from "@/app/[locale]/profile_2.png";
 import LanguageModal from "@/app/[locale]/LanguageModal";
+import { FaGripLinesVertical } from "react-icons/fa";
 
 export default async function Home({
   params,
@@ -22,7 +23,7 @@ export default async function Home({
             <div className="w-32 md:w-1/2 max-h-lvh overflow-hidden">
               <div className="w-full aspect-square rounded-xl overflow-hidden border-2 border-violet-900 flex justify-center items-center">
                 <Image
-                  src={ProfileIcon1}
+                  src={ProfileIcon2}
                   alt={"profile icon"}
                   className="aspect-square"
                 />
@@ -50,7 +51,8 @@ export default async function Home({
                   target={"_blank"}
                   className="w-full max-w-[300px] text-white font-bold justify-center mx-auto flex items-center transition duration-200 bg-gradient-to-r from-violet-900 to-blue-900 hover:bg-gradient-to-l hover:from-violet-700 hover:to-blue-700 rounded-full px-2 py-1"
                 >
-                  {l.name}
+                  <l.icon className="w-4 h-4 mr-2" /> <FaGripLinesVertical />
+                  <span className="w-[80px] text-center">{l.name}</span>
                 </Link>
               </div>
             ))}
