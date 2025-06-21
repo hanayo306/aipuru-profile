@@ -18,7 +18,7 @@ const links: LinkInfo[] = [
   },
   {
     name: "Discord",
-    url: "https://discord.gg/tHkmfAzuRG",
+    url: process.env.NEXT_PUBLIC_DISCORD_URL as string,
     icon: FaDiscord,
   },
   {
